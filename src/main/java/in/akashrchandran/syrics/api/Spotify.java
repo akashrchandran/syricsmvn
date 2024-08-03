@@ -3,7 +3,6 @@ package in.akashrchandran.syrics.api;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import in.akashrchandran.syrics.api.helper.HttpClientManager;
-import in.akashrchandran.syrics.exception.SyricsAccountNotPremiumException;
 import org.apache.hc.core5.http.ParseException;
 
 import java.io.IOException;
@@ -22,10 +21,6 @@ public class Spotify {
         JsonObject json = gson.fromJson(httpClientManager.get(loginUrl), JsonObject.class);
         String accessToken = json.get("accessToken").getAsString();
         httpClientManager.setAuthToken(accessToken);
-        JsonObject me = getMe();
-        if (me.get("product").getAsString().equals("free")) {
-            throw new SyricsAccountNotPremiumException("Your account is not premium");
-        }
     }
 
     public JsonObject getMe() throws IOException, ParseException {
