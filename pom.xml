@@ -4,13 +4,24 @@
 	<groupId>in.akashrchandran</groupId>
 	<artifactId>syrics</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 
 
 	<name>Syrics</name>
 	<description>Fetch lyrics from spotify using syrics artifact.</description>
 	<url>https://github.com/akashrchandran/syricsmvn/</url>
 
+	<scm>
+		<url>https://github.com/akashrchandran/syricsmvn</url>
+		<connection>scm:git:git://github.com/akashrchandran/syricsmvn.git</connection>
+		<developerConnection>scm:git:ssh://github.com:akashrchandran/syricsmvn.git</developerConnection>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>22</maven.compiler.source>
+		<maven.compiler.target>22</maven.compiler.target>
+	</properties>
 
 	<licenses>
 		<license>
